@@ -10,38 +10,40 @@
 <body>
     <div class="calculadora">
         <div class="visor">
-            <h1></h1>
+            <h1 id="tela"></h1>
         </div>
         <table>
             <tr>
-                <td><button>+</button></td>
-                <td><button>-</button></td>
-                <td><button>X</button></td>
-                <td><button>/</button></td>
+                <td><button onclick="addNumber('+')">+</button></td>
+                <td><button onclick="addNumber('-')">-</button></td>
+                <td><button onclick="addNumber('*')">*</button></td>
+                <td><button onclick="addNumber('/')">/</button></td>
             </tr>
             <tr>
-                <td><button>7</button></td>
-                <td><button>8</button></td>
-                <td><button>9</button></td>
-                <td><button class="c">C</button></td>
+                <td><button onclick="addNumber('7')">7</button></td>
+                <td><button onclick="addNumber('8')">8</button></td>
+                <td><button onclick="addNumber('9')">9</button></td>
+                <td><button class="c" onclick="clean()">C</button></td>
             </tr>
             <tr>
-                <td><button>4</button></td>
-                <td><button>5</button></td>
-                <td><button>6</button></td>
-                <td rowspan="3"><button class="igual">=</button></td>
+                <td><button onclick="addNumber('4')">4</button></td>
+                <td><button onclick="addNumber('5')">5</button></td>
+                <td><button onclick="addNumber('6')">6</button></td>
+                <td rowspan="3"><button class="igual" onclick="resultado()">=</button></td>
             </tr>
             <tr>
-                <td><button>1</button></td>
-                <td><button>2</button></td>
-                <td><button>3</button></td>
+                <td><button onclick="addNumber('1')">1</button></td>
+                <td><button onclick="addNumber('2')">2</button></td>
+                <td><button onclick="addNumber('3')">3</button></td>
             </tr>
             <tr>
-                <td colspan="2"><button class="zero">0</button></td>
-                <td><button>.</button></td>
+                <td colspan="2"><button class="zero" onclick="addNumber(0)">0</button></td>
+                <td><button onclick="addNumber('.')">.</button></td>
             </tr>
         </table>
     </div>
+
+    <script src="script.js"></script>
     
 </body>
 </html>
